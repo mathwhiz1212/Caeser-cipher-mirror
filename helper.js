@@ -1,5 +1,9 @@
 //Licensed under the Apache License 2.0. See license file for information.
 function question() {
+  "use strict";
+  var firstNum = "initial";
+  var SecondNum = "initial";
+  var Answer = "initial";
 
   var firstNum = prompt("Please enter the letter of the alphabet.");
   var SecondNum = Number(prompt("Please enter the shift."));
