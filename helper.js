@@ -1,10 +1,14 @@
-//Licensed under the Apache License 2.0. See license file for information.
-function helper() {
 "use strict";
-  var firstNum = "initial";
-  var SecondNum = "initial";
-  var Answer = "initial";
-  var letters = /^[A-Za-z]+$/;
+//Licensed under the Apache License 2.0. See license file for information.
+
+function helper() {
+
+var firstNum = "initial";
+var SecondNum = "initial";
+var Answer = "initial";
+var letters = /^[A-Za-z]+$/;
+
+ function getinput() {
 
   var firstNum = prompt("Please enter the letter of the alphabet.");
 
@@ -19,6 +23,9 @@ function helper() {
      }
 
   var SecondNum = Number(prompt("Please enter the shift."));
+}
+
+ function encipher() {
 
  if (firstNum === "a") {
     var firstNum = 1;
@@ -182,7 +189,11 @@ var Answer = Number(firstNum) + SecondNum;
   if (Answer === 26) {
     var Answer = "z";
   }
+}
+
+function showanswer() {
 
   alert("Your letter is " +  Answer);
   document.getElementById("Answer").innerHTML = "Your letter is " + Answer;
+ }
 }
