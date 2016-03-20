@@ -1,11 +1,24 @@
 //Licensed under the Apache License 2.0. See license file for information.
 function question() {
-  "use strict";
+"use strict"
   var firstNum = "initial";
   var SecondNum = "initial";
-  var Answer = "initial";
+  var Answer = "initial";  
+  var letters = /^[A-Za-z]+$/;
 
   var firstNum = prompt("Please enter the letter of the alphabet.");
+   
+   //Checks if input is a letter. Uses a modified version of code found here: http://www.w3resource.com/javascript/form/all-letters-field.php
+   if(firstNum == letters)
+     {
+      return true;
+     }
+   else
+     {
+     alert("Please enter only letters.");
+     return false;
+     }
+
   var SecondNum = Number(prompt("Please enter the shift."));
 
  if (firstNum === "a") {
