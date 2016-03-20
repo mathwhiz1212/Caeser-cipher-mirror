@@ -1,5 +1,5 @@
 //Licensed under the Apache License 2.0. See license file for information.
-function question() {
+function main() {
 "use strict";
   var firstNum = "initial";
   var SecondNum = "initial";
