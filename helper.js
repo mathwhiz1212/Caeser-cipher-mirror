@@ -1,13 +1,14 @@
 "use strict";
 //Licensed under the Apache License 2.0. See license file for information.
-//Need to get the length of the string, then converter the string to an array with each memeber of the array being a character. Then we need to reference each letter in the array and encipher them using the encipher()
-//  firstNumSplit[0] and string.length and split
+
 function helper() {
 
   var firstNum = "initial";
   var shift = "initial";
   var firstLetter = "initial";
   var letters = /^[A-Za-z]+$/;
+  var i = "0";
+  var Answer = "";
   
     //Get input
     var firstNum = prompt("Please enter the letter of the alphabet.");
@@ -20,268 +21,102 @@ function helper() {
     }
     else
     {
+      //Tells them to enter only letters.
       alert("Please enter only letters.");
     }
     
     //Get length of input.
+    
     var inputLength = firstNum.length;
-    //alert(inputLength);
+    
+    //Splits input into an array.
     
     var firstNumSplit = firstNum.split(""); 
-    //alert(firstNumSplit[0]);
-    //alert(firstNumSplit[1]);
+    
+    //Asks for shift.
     
     var shift = Number(prompt("Please enter the shift."));
 
   //Encipher
   
-  //If there is one or more letters in the string then encipher the first letter.
-  
-  if (inputLength => 1) {
-    
-    if (firstNumSplit[0] === "a") {
-      var firstNum = 1;
-    }
-    if (firstNumSplit[0] === "b") {
-      var firstNum = "2";
-    }
-    if (firstNumSplit[0] === "c") {
-      var firstNum = "3";
-    }
-    if (firstNumSplit[0] === "d") {
-      var firstNum = "4";
-    }
-    if (firstNumSplit[0] === "e") {
-      var firstNum = "5";
-    }
-    if (firstNumSplit[0] === "f") {
-      var firstNum = "6";
-    }
-    if (firstNumSplit[0] === "g") {
-      var firstNum = "7";
-    }
-    if (firstNumSplit[0] === "h") {
-      var firstNum = "8";
-    }
-    if (firstNumSplit[0] === "i") {
-      var firstNum = "9";
-    }
-    if (firstNumSplit[0] === "j") {
-      var firstNum = "10";
-    }
-    if (firstNumSplit[0] === "k") {
-      var firstNum = "11";
-    }
-    if (firstNumSplit[0] === "l") {
-      var firstNum = "12";
-    }
-    if (firstNumSplit[0] === "m") {
-      var firstNum = "13";
-    }
-    if (firstNumSplit[0] === "n") {
-      var firstNum = "14";
-    }
-    if (firstNumSplit[0] === "o") {
-      var firstNum = "15";
-    }
-    if (firstNumSplit[0] === "p") {
-      var firstNum = "16";
-    }
-    if (firstNumSplit[0] === "q") {
-      var firstNum = "17";
-    }
-    if (firstNumSplit[0] === "r") {
-      var firstNum = "18";
-    }
-    if (firstNumSplit[0] === "s") {
-      var firstNum = "19";
-    }
-    if (firstNumSplit[0] === "t") {
-      var firstNum = "20";
-    }
-    if (firstNumSplit[0] === "u") {
-      var firstNum = "21";
-    }
-    if (firstNumSplit[0] === "v") {
-      var firstNum = "22";
-    }
-    if (firstNumSplit[0] === "w") {
-      var firstNum = "23";
-    }
-    if (firstNumSplit[0] === "x") {
-      var firstNum = "24";
-    }
-    if (firstNumSplit[0] === "y") {
-      var firstNum = "25";
-    }
-    if (firstNumSplit[0] === "z") {
-      var firstNum = "26";
-    }
-
-    var firstLetter = Number(firstNum) + shift;
-    if (firstLetter > 26) {
-      var firstLetter = firstLetter - 26;
-    }
-
-    if (firstLetter === 1) {
-      var firstLetter = "a";
-    }
-    if (firstLetter === 2) {
-      var firstLetter = "b";
-    }
-    if (firstLetter === 3) {
-      var firstLetter = "c";
-    }
-    if (firstLetter === 4) {
-      var firstLetter = "d";
-    }
-    if (firstLetter === 5) {
-      var firstLetter = "e";
-    }
-    if (firstLetter === 6) {
-      var firstLetter = "f";
-    }
-    if (firstLetter === 7) {
-      var firstLetter = "g";
-    }
-    if (firstLetter === 8) {
-      var firstLetter = "h";
-    }
-    if (firstLetter === 9) {
-      var firstLetter = "i";
-    }
-    if (firstLetter === 10) {
-      var firstLetter = "j";
-    }
-    if (firstLetter === 11) {
-      var firstLetter = "k";
-    }
-    if (firstLetter === 12) {
-      var firstLetter = "l";
-    }
-    if (firstLetter === 13) {
-      var firstLetter = "m";
-    }
-    if (firstLetter === 14) {
-      var firstLetter = "n";
-    }
-    if (firstLetter === 15) {
-      var firstLetter = "o";
-    }
-    if (firstLetter === 16) {
-      var firstLetter = "p";
-    }
-    if (firstLetter === 17) {
-      var firstLetter = "q";
-    }
-    if (firstLetter === 18) {
-      var firstLetter = "r";
-    }
-    if (firstLetter === 19) {
-      var firstLetter = "s";
-    }
-    if (firstLetter === 20) {
-      var firstLetter = "t";
-    }
-    if (firstLetter === 21) {
-      var firstLetter = "u";
-    }
-    if (firstLetter === 22) {
-      var firstLetter = "v";
-    }
-    if (firstLetter === 23) {
-      var firstLetter = "w";
-    }
-    if (firstLetter === 24) {
-      var firstLetter = "x";
-    }
-    if (firstLetter === 25) {
-      var firstLetter = "y";
-    }
-    if (firstLetter === 26) {
-      var firstLetter = "z";
-    }
-}
-    //If there is two or more letters in the string then encipher the second letter.
-    
-    if (inputLength => 2) {
+    for (i = 0; i < inputLength; i++) {
       
-      if (firstNumSplit[1] === "a") {
+      if (firstNumSplit[i] === "a") {
         var firstNum = 1;
       }
-      if (firstNumSplit[1] === "b") {
+      if (firstNumSplit[i] === "b") {
         var firstNum = "2";
       }
-      if (firstNumSplit[1] === "c") {
+      if (firstNumSplit[i] === "c") {
         var firstNum = "3";
       }
-      if (firstNumSplit[1] === "d") {
+      if (firstNumSplit[i] === "d") {
         var firstNum = "4";
       }
-      if (firstNumSplit[1] === "e") {
+      if (firstNumSplit[i] === "e") {
         var firstNum = "5";
       }
-      if (firstNumSplit[1] === "f") {
+      if (firstNumSplit[i] === "f") {
         var firstNum = "6";
       }
-      if (firstNumSplit[1] === "g") {
+      if (firstNumSplit[i] === "g") {
         var firstNum = "7";
       }
-      if (firstNumSplit[1] === "h") {
+      if (firstNumSplit[i] === "h") {
         var firstNum = "8";
       }
-      if (firstNumSplit[1] === "i") {
+      if (firstNumSplit[i] === "i") {
         var firstNum = "9";
       }
-      if (firstNumSplit[1] === "j") {
+      if (firstNumSplit[i] === "j") {
         var firstNum = "10";
       }
-      if (firstNumSplit[1] === "k") {
+      if (firstNumSplit[i] === "k") {
         var firstNum = "11";
       }
-      if (firstNumSplit[1] === "l") {
+      if (firstNumSplit[i] === "l") {
         var firstNum = "12";
       }
-      if (firstNumSplit[1] === "m") {
+      if (firstNumSplit[i] === "m") {
         var firstNum = "13";
       }
-      if (firstNumSplit[1] === "n") {
+      if (firstNumSplit[i] === "n") {
         var firstNum = "14";
       }
-      if (firstNumSplit[1] === "o") {
+      if (firstNumSplit[i] === "o") {
         var firstNum = "15";
       }
-      if (firstNumSplit[1] === "p") {
+      if (firstNumSplit[i] === "p") {
         var firstNum = "16";
       }
-      if (firstNumSplit[1] === "q") {
+      if (firstNumSplit[i] === "q") {
         var firstNum = "17";
       }
-      if (firstNumSplit[1] === "r") {
+      if (firstNumSplit[i] === "r") {
         var firstNum = "18";
       }
-      if (firstNumSplit[1] === "s") {
+      if (firstNumSplit[i] === "s") {
         var firstNum = "19";
       }
-      if (firstNumSplit[1] === "t") {
+      if (firstNumSplit[i] === "t") {
         var firstNum = "20";
       }
-      if (firstNumSplit[1] === "u") {
+      if (firstNumSplit[i] === "u") {
         var firstNum = "21";
       }
-      if (firstNumSplit[1] === "v") {
+      if (firstNumSplit[i] === "v") {
         var firstNum = "22";
       }
-      if (firstNumSplit[1] === "w") {
+      if (firstNumSplit[i] === "w") {
         var firstNum = "23";
       }
-      if (firstNumSplit[1] === "x") {
+      if (firstNumSplit[i] === "x") {
         var firstNum = "24";
       }
-      if (firstNumSplit[1] === "y") {
+      if (firstNumSplit[i] === "y") {
         var firstNum = "25";
       }
-      if (firstNumSplit[1] === "z") {
+      if (firstNumSplit[i] === "z") {
         var firstNum = "26";
       }
 
@@ -368,14 +203,12 @@ function helper() {
       if (secondLetter === 26) {
         var secondLetter = "z";
       }
+      //Combine  letters
+      
+      var Answer = Answer + secondLetter;
 }
-
-
   
     //Show result
- 
-    //Combine  letters
-    var Answer = firstLetter + secondLetter;
      
     alert("Your Answer is " +  Answer);
     document.getElementById("Answer").innerHTML = "Your Answer is " + Answer;
