@@ -19,6 +19,7 @@ function encipher() {
     if (userInput.match(letters))
     {
       //Do nothing.
+      //Checks for whitespace
     }
     else
     {
