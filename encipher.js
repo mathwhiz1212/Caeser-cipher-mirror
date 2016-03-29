@@ -5,27 +5,41 @@ function encipher() {
 
   var userInput = "";
   var shiftNum = "";
-  var letters = /^[A-Za-z]+$/;
+//Letters regex
+  var LetterReg = /^[A-Za-z]+$/;
+//Number regex 
+  var numReg = /^\d+$/;
   var i = "0";
   var Answer = "";
 //whitespace regex
   var space = /\s/;
+
     //Get input
-    //var userInput = prompt("Please enter the secret message you want to encipher. Only letters, no caps, spaces or punctuation.");
+
     var userInput = document.getElementById("userInput").value;
     var shiftNum = document.getElementById("shiftNum").value;
     //Checks if input is a letter. Uses a modified version of code found here: http://www.w3resource.com/javascript/form/all-letters-field.php
 
-    if (userInput.match(letters))
+    if (userInput.match(LetterReg))
     {
       //Do nothing.
-      //Checks for whitespace
     }
     else
     {
       //Tells them to enter only letters with no caps, spaces or punctuation.
 
-      alert("Please enter only letters, no caps, spaces or punctuation.");
+      alert("Please enter only letters, no caps, spaces or punctuation in message field.");
+    }
+
+if (shiftNum.match(numReg))
+    {
+      //Do nothing.
+    }
+    else
+    {
+      //Tells them to enter only numbers.
+
+      alert("Please enter only numbers in the shift field.");
     }
 
     //Get length of input.
@@ -35,10 +49,6 @@ function encipher() {
     //Splits input into an array.
 
     var inputSplit = userInput.split("");
-
-    //Asks for shift.
-
-    //var shiftNum = Number(prompt("Please enter the shift."));
 
   //Encipher
 
