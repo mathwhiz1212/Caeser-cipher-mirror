@@ -41,7 +41,7 @@ if (shiftNum.match(numReg))
 
       alert("Please enter only numbers in the shift field.");
     }
-    //Gets input length.
+    //gets length
 
     var inputLength = userInput.length;
 

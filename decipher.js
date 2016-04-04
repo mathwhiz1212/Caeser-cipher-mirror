@@ -1,7 +1,7 @@
 "use strict";
 //Licensed under the Apache License 2.0. See license file for information.
 
-function encipher() {
+function decipher() {
 
   var userInput = "";
   var shiftNum = "";
@@ -41,10 +41,9 @@ if (shiftNum.match(numReg))
 
       alert("Please enter only numbers in the shift field.");
     }
-    //Gets input length.
 
-    var inputLength = userInput.length;
-
+//Gets input length
+var inputLength = userInput.length;
 
     //Splits input into an array.
 
@@ -133,9 +132,9 @@ if (shiftNum.match(numReg))
         var userInput = "26";
       }
 
-      var letter = Number(userInput) + Number(shiftNum);
-      if (letter > 26) {
-        var letter = letter - 26;
+      var letter = Number(userInput) - Number(shiftNum);
+      if (letter < 1) {
+        var letter = letter + 26;
       }
 
       if (letter === 1) {

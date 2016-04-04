@@ -54,7 +54,7 @@ function frequency() {
 
     alert("Please enter only letters, no caps, spaces or punctuation in message field.");
   }
-//Gets input length.
+//get length
 var inputLength = userInput.length;
 
 
@@ -146,6 +146,7 @@ var inputLength = userInput.length;
       var z = Number(z) + 1;
     }
 }
+    //var Answer = Answer + letter;
 
 var anw = [a,b,c,d,e,f,g,h,ii,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
 
@@ -155,11 +156,16 @@ var letterFreq = 0;
 
 for (var i = 1; i < anw.length; i++) {
   if (anw[i] > Freq) {
-    //letterFreq shows which set in the array is the most frequent.
+    //maxIndex shows whcih set in the array is the most frequent.
     letterFreq = i;
     Freq = anw[i];
   }
 }
+  //alert(letterFreq);
+  //alert("Your secret message is " +  Answer);
+  //document.getElementById("Answer").innerHTML = "Your secret message is " + Answer;
+
+//for (i = 0; i < userInput.length; i++) {
 
   if (inputSplit[i] === "a") {
     var userInput = 1;
@@ -239,10 +245,102 @@ for (var i = 1; i < anw.length; i++) {
   if (inputSplit[i] === "z") {
     var userInput = "26";
   }
+ //alert(letterFreq);
   var shiftNum = letterFreq - 4;
+  //var shiftNum = Number(userInput) - lettersh;
+//alert(letterFreq)
+//alert(userInput);
+ //alert(shiftNum);
+  //var letter = userInput - shiftNum;
+//  alert(letter);
+//var letter =  ;
+//alert(shiftNum);
+//var letter = shiftNum;
+//alert(letter);
   if (shiftNum < 1) {
     var shiftNum = shiftNum + 26;
   }
+  //alert(letter);
   alert("The shift is " +  shiftNum);
   document.getElementById("Answer").innerHTML = "The shift is " +  shiftNum;
+  // if (letter === 1) {
+  //   var letter = "a";
+  // }
+  // if (letter === 2) {
+  //   var letter = "b";
+  // }
+  // if (letter === 3) {
+  //   var letter = "c";
+  // }
+  // if (letter === 4) {
+  //   var letter = "d";
+  // }
+  // if (letter === 5) {
+  //   var letter = "e";
+  // }
+  // if (letter === 6) {
+  //   var letter = "f";
+  // }
+  // if (letter === 7) {
+  //   var letter = "g";
+  // }
+  // if (letter === 8) {
+  //   var letter = "h";
+  // }
+  // if (letter === 9) {
+  //   var letter = "i";
+  // }
+  // if (letter === 10) {
+  //   var letter = "j";
+  // }
+  // if (letter === 11) {
+  //   var letter = "k";
+  // }
+  // if (letter === 12) {
+  //   var letter = "l";
+  // }
+  // if (letter === 13) {
+  //   var letter = "m";
+  // }
+  // if (letter === 14) {
+  //   var letter = "n";
+  // }
+  // if (letter === 15) {
+  //   var letter = "o";
+  // }
+  // if (letter === 16) {
+  //   var letter = "p";
+  // }
+  // if (letter === 17) {
+  //   var letter = "q";
+  // }
+  // if (letter === 18) {
+  //   var letter = "r";
+  // }
+  // if (letter === 19) {
+  //   var letter = "s";
+  // }
+  // if (letter === 20) {
+  //   var letter = "t";
+  // }
+  // if (letter === 21) {
+  //   var letter = "u";
+  // }
+  // if (letter === 22) {
+  //   var letter = "v";
+  // }
+  // if (letter === 23) {
+  //   var letter = "w";
+  // }
+  // if (letter === 24) {
+  //   var letter = "x";
+  // }
+  // if (letter === 25) {
+  //   var letter = "y";
+  // }
+  // if (letter === 26) {
+  //   var letter = "z";
+  // }
+//alert(letter);
 }
+//}
