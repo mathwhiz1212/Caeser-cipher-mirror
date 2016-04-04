@@ -1,2 +1,0 @@
-check for each letter using same code as encipher code. If a or A then var a + 1
-then do for i < InputLength then find which one has higher frequency then decipher based on most frequent = e.
