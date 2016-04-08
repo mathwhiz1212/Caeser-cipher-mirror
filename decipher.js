@@ -2,7 +2,9 @@
 //Licensed under the Apache License 2.0. See license file for information.
 
 function decipher() {
-
+  
+  var letterPos = "";
+  var alphabet = "";
   var userInput = "";
   var shiftNum = "";
 //Letters regex
@@ -132,93 +134,17 @@ var inputLength = userInput.length;
         var userInput = "26";
       }
 
-      var letter = Number(userInput) - Number(shiftNum);
-      if (letter < 1) {
+      var letter = Number(userInput) - Number(shiftNum) - 1;
+      if (letter < 0) {
         var letter = letter + 26;
       }
 
-      if (letter === 1) {
-        var letter = "a";
-      }
-      if (letter === 2) {
-        var letter = "b";
-      }
-      if (letter === 3) {
-        var letter = "c";
-      }
-      if (letter === 4) {
-        var letter = "d";
-      }
-      if (letter === 5) {
-        var letter = "e";
-      }
-      if (letter === 6) {
-        var letter = "f";
-      }
-      if (letter === 7) {
-        var letter = "g";
-      }
-      if (letter === 8) {
-        var letter = "h";
-      }
-      if (letter === 9) {
-        var letter = "i";
-      }
-      if (letter === 10) {
-        var letter = "j";
-      }
-      if (letter === 11) {
-        var letter = "k";
-      }
-      if (letter === 12) {
-        var letter = "l";
-      }
-      if (letter === 13) {
-        var letter = "m";
-      }
-      if (letter === 14) {
-        var letter = "n";
-      }
-      if (letter === 15) {
-        var letter = "o";
-      }
-      if (letter === 16) {
-        var letter = "p";
-      }
-      if (letter === 17) {
-        var letter = "q";
-      }
-      if (letter === 18) {
-        var letter = "r";
-      }
-      if (letter === 19) {
-        var letter = "s";
-      }
-      if (letter === 20) {
-        var letter = "t";
-      }
-      if (letter === 21) {
-        var letter = "u";
-      }
-      if (letter === 22) {
-        var letter = "v";
-      }
-      if (letter === 23) {
-        var letter = "w";
-      }
-      if (letter === 24) {
-        var letter = "x";
-      }
-      if (letter === 25) {
-        var letter = "y";
-      }
-      if (letter === 26) {
-        var letter = "z";
-      }
+      alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+      letterPos = alphabet[letter];
 
       //Combines  letters
 
-      var Answer = Answer + letter;
+      var Answer = Answer + letterPos;
 }
 
     //Show result
