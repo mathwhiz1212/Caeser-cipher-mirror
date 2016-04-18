@@ -21,6 +21,30 @@ function encipher() {
   var userInput = document.getElementById("userInput").value;
   var shiftNum = document.getElementById("shiftNum").value;
 
+//Checks if input is a letter. Uses a modified version of code found here: http://www.w3resource.com/javascript/form/all-letters-field.php
+
+  if (userInput.match(LetterReg))
+  {
+    //Do nothing.
+  }
+  else
+  {
+    //Tells them to enter only letters with no caps, spaces or punctuation.
+
+    alert("Please enter only letters, no caps, spaces or punctuation in message field.");
+  }
+
+if (shiftNum.match(numReg))
+  {
+    //Do nothing.
+  }
+  else
+  {
+    //Tells them to enter only numbers.
+
+    alert("Please enter only numbers in the shift field.");
+  }
+
   //Gets input length.
 
   var inputLength = userInput.length;
@@ -30,6 +54,7 @@ function encipher() {
 
   var inputSplit = userInput.split("");
 
+//Code using Evan's idea and his fix.
 
   alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
@@ -61,28 +86,3 @@ function encipher() {
   document.getElementById("Answer").innerHTML = "Your secret message is " + Answer;
 
 }
-
-
-//Checks if input is a letter. Uses a modified version of code found here: http://www.w3resource.com/javascript/form/all-letters-field.php
-
-//     if (userInput.match(LetterReg))
-//     {
-//       //Do nothing.
-//     }
-//     else
-//     {
-//       //Tells them to enter only letters with no caps, spaces or punctuation.
-//
-//       alert("Please enter only letters, no caps, spaces or punctuation in message field.");
-//     }
-//
-// if (shiftNum.match(numReg))
-//     {
-//       //Do nothing.
-//     }
-//     else
-//     {
-//       //Tells them to enter only numbers.
-//
-//       alert("Please enter only numbers in the shift field.");
-//     }
