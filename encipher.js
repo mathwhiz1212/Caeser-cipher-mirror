@@ -3,8 +3,6 @@
 
 function encipher() {
   var il = "0";
-  var hh = "";
-  var letterPos = "";
   var alphabet = "";
   var userInput = "";
   var shiftNum = "";
