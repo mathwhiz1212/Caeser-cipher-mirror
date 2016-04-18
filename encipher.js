@@ -33,19 +33,21 @@ function encipher() {
 
   alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
+ for (il = 0; il < inputLength; il++) {
 
-  for (il = 0; il < inputLength; il++) {
-
-    for (i = 0; i < 25; i++) {
+    for (i = 0; i < 26; i++) {
       // var i1 = i - 1
       if (inputSplit[il] === alphabet[i]) { //-1
-
-        var letter = Number(il) + Number(shiftNum);
+        console.log(inputSplit[il]);
+        console.log(i);
+        var letter = Number(i) + Number(shiftNum);
         if (letter > 25) {
           var letter = letter - 26;
+          
         }
         letterPos = alphabet[letter];
         var Answer = Answer + letterPos;
+        break;
       }
 //alert();
     }
@@ -53,6 +55,7 @@ function encipher() {
     //Combines  letters
 
   }
+
   //Show result
   alert("Your secret message is " +  Answer);
   document.getElementById("Answer").innerHTML = "Your secret message is " + Answer;
